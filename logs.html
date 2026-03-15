@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Attack Logs</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+<meta http-equiv="refresh" content="5">
+
+</head>
+
+<body>
+
+<h1>Detected Intrusions</h1>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Source IP</th>
+<th>Destination IP</th>
+<th>Attack</th>
+<th>Time</th>
+</tr>
+
+{% for row in rows %}
+
+<tr>
+<td>{{ row[0] }}</td>
+<td>{{ row[1] }}</td>
+<td>{{ row[2] }}</td>
+<td>{{ row[3] }}</td>
+<td>{{ row[4] }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/">Back to Dashboard</a>
+
+</body>
+</html>
